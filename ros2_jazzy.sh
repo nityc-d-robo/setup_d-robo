@@ -24,14 +24,15 @@ sudo apt -y update
 sudo apt -y install tzdata
 
 sudo apt -y install software-properties-common
-sudo add-apt -y-repository universe
+sudo add-apt-repository -y universe
 
 sudo apt -y update && sudo apt -y install curl
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt /sources.list.d/ros2.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-sudo apt -y update && sudo apt -y install ros-dev-tools
+sudo apt-get -y update
+sudo apt -y update && sudo apt -y install ros-dev-tools --fix-missing
 
 sudo apt -y update
 sudo apt -y upgrade 
