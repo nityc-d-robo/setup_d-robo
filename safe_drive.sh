@@ -1,8 +1,8 @@
-sudo apt install -y curl gnupg2 lsb-release python3-pip git
+sudo apt -y install curl gnupg2 lsb-release python3-pip git
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 
-sudo apt install -y python3-venv
+sudo apt -y install python3-venv
 python3 -m venv d-robo
 source d-robo/bin/activate
 
