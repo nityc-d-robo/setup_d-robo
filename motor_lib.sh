@@ -1,0 +1,1 @@
+sudo cp ~/setup_d-robo/various/various/99-usb-can-hardware.rules /etc/udev/rules.d/
